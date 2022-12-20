@@ -1,6 +1,9 @@
-from tkinter import Frame, Tk, BOTH, Label, Listbox, END, Variable
+from tkinter import Frame, Tk, PhotoImage, Label, Listbox, END, Variable, Toplevel
 from tkinter import filedialog, ttk
 from tkinter.messagebox import showerror
+
+from PIL import Image, ImageTk
+
 import crit1
 import crit2
 import graph
@@ -115,6 +118,18 @@ class SostCrit(Frame):
 
     def show_graph(self):
         graph.draw(self.fl)
+        self.window = Graph()
+
+
+
+class Graph(Toplevel):
+    def __init__(self):
+        super().__init__()
+        self.title('График')
+        self.geometry('700x500')
+        self.img = ImageTk.PhotoImage(Image.open("plot.png"))
+        self.panel = Label(self, image=self.img)
+        self.panel.pack(side="bottom", fill="both", expand="no")
 
 
 def main():

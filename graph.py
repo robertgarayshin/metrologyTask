@@ -12,10 +12,10 @@ def draw(filename):
 
     h = sorted(ls)  # sorted
 
-    fit = stats.norm.pdf(h, np.mean(h), np.std(h))  # this is a fitting indeed
+    fit = stats.norm.pdf(h)  # this is a fitting indeed
 
     pl.plot(h, fit, '0.01')
 
     pl.hist(h)  # use this to draw histogram of your data
 
-    pl.show()
+    pl.savefig('plot.png')
