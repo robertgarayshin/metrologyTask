@@ -2,9 +2,9 @@ import csv
 import math
 
 
-def cr1(q):
+def cr1(q, filename):
     def openfile():
-        f = open('22_var28_Sost_GOST.txt', 'r')
+        f = open(filename, 'r')
         ls = []
         for line in f:
             line = line.replace(',', '.')
