@@ -13,6 +13,7 @@ def cr1():
         for line in f:
             line = line.replace(',', '.')
             ls.append(float(line[:-1]))
+        print(ls)
         return ls
 
     def average_count():
@@ -164,5 +165,3 @@ if is_correct:
         print('all is good')
     else:
         print('criteria not pass')
-
-
