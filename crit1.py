@@ -99,8 +99,6 @@ def cr1(q, filename):
         lower = interpolation(left, q1_95[left], right, q1_95[right], len(lst))
 
     if lower < d <= bigger:
-        print(lower, '<', d, '≤', bigger, 'is True')
         return lst, avg, True
     else:
-        print('decline')
         return None, None, False
