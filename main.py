@@ -9,6 +9,8 @@ import crit2
 import graph
 
 
+print("Hello!")
+
 class SostCrit(Frame):
     q = 0.0
 
