@@ -10,6 +10,7 @@ import graph
 
 
 print("Hello!")
+print("Hey!")
 
 class SostCrit(Frame):
     q = 0.0
